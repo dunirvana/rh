@@ -1,4 +1,3 @@
-/*
 package br.com.alura.rh.model;
 
 import java.math.BigDecimal;
@@ -7,12 +6,14 @@ import java.time.LocalDate;
 
 import br.com.alura.rh.ValidacaoException;
 
-public class Terceirizado extends Funcionario {
+public class Terceirizado {
 
+	private DadosPessoais dadosPessoais;
 	private String empresa;
 	
-	public Terceirizado(String nome, String cpf, Cargo cargo, BigDecimal salario) {
-		super(nome, cpf, cargo, salario);
+	public Terceirizado(String nome, String cpf, Cargo cargo, BigDecimal salario, String empresa) {
+		this.dadosPessoais = new DadosPessoais(nome, cpf, cargo, salario);
+		this.empresa = empresa;
 	}
 
 	public String getEmpresa() {
@@ -24,4 +25,3 @@ public class Terceirizado extends Funcionario {
 	}
 
 }
-*/

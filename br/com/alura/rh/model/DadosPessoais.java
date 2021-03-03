@@ -6,24 +6,18 @@ import java.time.LocalDate;
 
 import br.com.alura.rh.ValidacaoException;
 
-public class Funcionario {
+public class DadosPessoais {
 
 	private String nome;
 	private String cpf;
 	private Cargo cargo;
 	private BigDecimal salario;
-	private LocalDate dataUltimoReajuste;
 
-	public Funcionario(String nome, String cpf, Cargo cargo, BigDecimal salario) {
+	public DadosPessoais(String nome, String cpf, Cargo cargo, BigDecimal salario) {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.cargo = cargo;
 		this.salario = salario;
-	}
-
-	public void atualizarSalario(BigDecimal novoSalario) {
-		this.salario = novoSalario;
-		this.dataUltimoReajuste = LocalDate.now();
 	}
 
 	public String getNome() {
@@ -58,16 +52,5 @@ public class Funcionario {
 		this.salario = salario;
 	}
 
-	public LocalDate getDataUltimoReajuste() {
-		return dataUltimoReajuste;
-	}
-
-	public void setDataUltimoReajuste(LocalDate dataUltimoReajuste) {
-		this.dataUltimoReajuste = dataUltimoReajuste;
-	}
-
-	public void promover(Cargo novoCargo) {
-		this.cargo = novoCargo;		
-	}
 
 }
